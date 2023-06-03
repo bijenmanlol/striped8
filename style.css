@@ -1,0 +1,167 @@
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, "sans-serif";
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    background-image: url(assets/graphics/background.jpg);
+    background-size: 80em;
+    background-repeat: no-repeat;
+}
+  
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    transition: 0.25s;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 1.5em;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #bababa;
+}
+
+.icon{
+    width: 10em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-center;
+    padding: 2em;
+}
+
+.intro h1{
+    font-size: 6rem;
+    margin: 0;
+}
+
+.intro p{
+    font-size: 2rem;
+}
+
+.scroll, .join{
+    transition: 0.25s;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0.5em;
+    padding: 0.5em 0.75em 0.5em 0.75em;
+    cursor: pointer;
+}
+
+.scroll:hover, .join:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.join{
+    margin: 2em;
+    font-size: 1rem;
+}
+
+.content{
+    width: 70%;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    display: flex;
+    align-items: center;
+}
+
+.content-text h3{
+    font-size: 2rem;
+}
+
+.content-text p{
+    font-size: 1.2rem;
+}
+
+.world{
+    width: 17em;
+}
+
+.external-link{
+    text-decoration: underline;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#popup{
+    display: none;
+    position: fixed;
+    right: 0.5em; 
+    margin-top: 0.5em;
+}
+  
+#popup img{
+    width: 4em;
+}
+  
+#popup-open{
+    display: none;
+}
+  
+#menu{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    border-radius: 0.5em;
+    background-color: #424242;
+    width: 12em;
+    height: 17em;
+    box-shadow: 0 0 5px #000000;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav-link{
+        display: none;
+    }
+    .join{
+        display: none;
+    }
+    #popup{
+      display: block;
+    }
+}
